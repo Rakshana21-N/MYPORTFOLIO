@@ -1,0 +1,320 @@
+.contact {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--bg);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin: var(--spacing-md) auto 0;
+  max-width: 500px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.contact-info h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.info-item {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: var(--radius-lg);
+  color: var(--primary);
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.info-label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: var(--font-size-base);
+  color: var(--text);
+  margin: 0;
+  font-weight: 600;
+}
+
+.social-links {
+  margin-top: var(--spacing-lg);
+}
+
+.social-links h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.social-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.social-btn.linkedin {
+  background: rgba(0, 119, 181, 0.1);
+  color: #0077b5;
+  border: 2px solid #0077b5;
+}
+
+.social-btn.linkedin:hover {
+  background: #0077b5;
+  color: white;
+}
+
+.social-btn.email {
+  background: rgba(236, 72, 153, 0.1);
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+.social-btn.email:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+.social-btn.github {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.social-btn.github:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  background: var(--bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.form-group label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  transition: all var(--transition-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.submit-btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: var(--spacing-md);
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.3);
+}
+
+.submit-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .contact-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .contact-info h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .info-item {
+    padding: var(--spacing-md);
+  }
+
+  .info-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact-form-wrapper {
+    padding: var(--spacing-lg);
+  }
+
+  .social-btn {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .contact-info h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .info-item {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .info-label {
+    font-size: var(--font-size-xs);
+  }
+
+  .info-value {
+    font-size: var(--font-size-sm);
+  }
+
+  .social-buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-form-wrapper {
+    padding: var(--spacing-md);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  .submit-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+}

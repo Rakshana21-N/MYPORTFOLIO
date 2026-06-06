@@ -1,0 +1,228 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 100%);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.hero.dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.hero.light {
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.hero-title {
+  font-size: var(--font-size-5xl);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--tertiary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.hero-tagline {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-md);
+}
+
+.scroll-indicator {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.scroll-button:hover {
+  transform: translateY(5px);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+}
+
+/* Blob Animation Background */
+.hero-decoration {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.blob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--tertiary), var(--accent));
+  top: 100px;
+  right: 150px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: 0.2;
+}
+
+.blob-3 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  bottom: 50px;
+  right: 300px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  opacity: 0.25;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .hero-decoration {
+    opacity: 0.2;
+    width: 300px;
+    height: 300px;
+  }
+
+  .blob {
+    width: 150px;
+    height: 150px;
+  }
+
+  .blob-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .blob-3 {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-tagline {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .hero-decoration {
+    opacity: 0.1;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 80vh;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero-tagline {
+    font-size: var(--font-size-sm);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+}

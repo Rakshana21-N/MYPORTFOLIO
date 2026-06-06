@@ -1,0 +1,293 @@
+.experience {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 100%);
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: var(--spacing-xl) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--secondary), var(--tertiary));
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-lg);
+}
+
+.timeline-item.experience {
+  text-align: right;
+}
+
+.timeline-item.experience .timeline-content {
+  text-align: right;
+  grid-column: 1;
+}
+
+.timeline-item.internship {
+  text-align: left;
+}
+
+.timeline-item.internship .timeline-content {
+  text-align: left;
+  grid-column: 3;
+}
+
+.timeline-marker {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.marker-dot {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 3px var(--primary);
+  z-index: 2;
+  transition: all var(--transition-base);
+}
+
+.timeline-item:hover .marker-dot {
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+}
+
+.marker-line {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), transparent);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-content {
+  background: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 20px;
+}
+
+.timeline-item.experience .timeline-content::before {
+  right: -10px;
+  border-left: 10px solid var(--bg-secondary);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.timeline-item.internship .timeline-content::before {
+  left: -10px;
+  border-right: 10px solid var(--bg-secondary);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.timeline-content:hover {
+  border-color: var(--primary);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-lg);
+}
+
+.job-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.company-name {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 600;
+}
+
+.period {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.responsibilities li {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.responsibilities li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    text-align: left !important;
+  }
+
+  .timeline-item.experience .timeline-content,
+  .timeline-item.internship .timeline-content {
+    text-align: left;
+    grid-column: 1 !important;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+  }
+
+  .marker-dot {
+    position: relative;
+    left: 5px;
+  }
+
+  .timeline-content {
+    margin-left: 60px;
+  }
+
+  .timeline-content::before {
+    display: none;
+  }
+
+  .content-header {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .period {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .timeline-content {
+    margin-left: 50px;
+    padding: var(--spacing-md);
+  }
+
+  .job-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .responsibilities li {
+    font-size: var(--font-size-xs);
+    padding-left: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .timeline {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .marker-dot {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+  }
+
+  .timeline-content {
+    margin-left: 40px;
+    padding: var(--spacing-md);
+  }
+
+  .job-title {
+    font-size: var(--font-size-base);
+  }
+
+  .company-name {
+    font-size: var(--font-size-sm);
+  }
+
+  .period {
+    font-size: var(--font-size-xs);
+  }
+
+  .responsibilities li {
+    font-size: var(--font-size-xs);
+    gap: var(--spacing-sm);
+  }
+}
