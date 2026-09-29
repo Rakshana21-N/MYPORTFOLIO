@@ -26,7 +26,7 @@ const About: React.FC = () => {
   };
 
   const highlights = [
-    { icon: '💼', label: '1.6 Years', text: 'Professional Experience' },
+    { icon: '💼', label: '2 Years', text: 'Professional Experience' },
     { icon: '🎯', label: 'MEAN Stack', text: 'Specialization' },
     { icon: '🔐', label: 'Security', text: 'Focus' },
     { icon: '⚡', label: 'Performance', text: 'Oriented' },
