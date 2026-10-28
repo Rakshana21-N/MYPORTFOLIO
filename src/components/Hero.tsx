@@ -31,9 +31,9 @@ const Hero: React.FC = () => {
     const element = document.createElement('a');
     element.setAttribute(
       'href',
-      `${import.meta.env.BASE_URL}Software_developer_Rakshana_resume.pdf`,
+      `${import.meta.env.BASE_URL}Software_Developer_Rakshana_Resume.pdf`,
     );
-    element.setAttribute('download', 'Software_developer_Rakshana_resume.pdf');
+    element.setAttribute('download', 'Software_Developer_Rakshana_Resume.pdf');
     element.style.display = 'none';
     document.body.appendChild(element);
     element.click();

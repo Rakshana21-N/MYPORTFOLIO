@@ -81,8 +81,8 @@ Output will be in the `dist/` folder.
    // Around line 50 in handleDownloadResume function
    // Replace the create download logic with:
    const link = document.createElement('a');
-   link.href = `${import.meta.env.BASE_URL}Software_developer_Rakshana_resume.pdf`;
-   link.download = 'Software_developer_Rakshana_resume.pdf';
+   link.href = `${import.meta.env.BASE_URL}Software_Developer_Rakshana_Resume.pdf.pdf`;
+   link.download = 'Software_Developer_Rakshana_Resume.pdf';
    link.click();
    ```
 
