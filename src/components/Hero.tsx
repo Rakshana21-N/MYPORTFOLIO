@@ -29,7 +29,10 @@ const Hero: React.FC = () => {
 
   const handleDownloadResume = () => {
     const element = document.createElement('a');
-    element.setAttribute('href', '/Software_developer_Rakshana_resume.pdf');
+    element.setAttribute(
+      'href',
+      `${import.meta.env.BASE_URL}Software_developer_Rakshana_resume.pdf`,
+    );
     element.setAttribute('download', 'Software_developer_Rakshana_resume.pdf');
     element.style.display = 'none';
     document.body.appendChild(element);
