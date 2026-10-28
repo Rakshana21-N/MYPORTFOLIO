@@ -26,7 +26,7 @@ const About: React.FC = () => {
   };
 
   const highlights = [
-    { icon: '💼', label: '1.6 Years', text: 'Professional Experience' },
+    { icon: '💼', label: '2 Years', text: 'Professional Experience' },
     { icon: '🎯', label: 'MEAN Stack', text: 'Specialization' },
     { icon: '🔐', label: 'Security', text: 'Focus' },
     { icon: '⚡', label: 'Performance', text: 'Oriented' },
@@ -55,7 +55,7 @@ const About: React.FC = () => {
         >
           <motion.div variants={itemVariants} className="about-text">
             <p className="about-description">
-              I am a Full Stack Developer with 1.5 years of experience in MEAN Stack development.
+              I am a Full Stack Developer with 2 years of experience in MEAN Stack development.
               My expertise lies in building secure authentication systems, RESTful APIs,
               role-based access control, and scalable backend architectures. I enjoy solving
               complex problems and developing efficient applications that focus on security,
